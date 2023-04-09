@@ -1,0 +1,22 @@
+{
+  "name": "taskr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "colors-cli": "^1.0.32"
+  },
+  "devDependencies": {
+    "standard": "^17.0.0"
+  },
+  "eslintConfig": {
+    "extends": "standard"
+  }
+}

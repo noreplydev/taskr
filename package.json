@@ -13,7 +13,8 @@
   "dependencies": {
     "colors-cli": "^1.0.32",
     "dotenv": "^16.0.3",
-    "pg": "^8.10.0"
+    "pg": "^8.10.0",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "standard": "^17.0.0"

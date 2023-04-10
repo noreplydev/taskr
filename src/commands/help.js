@@ -6,6 +6,4 @@ export const help = () => {
   commandNames.forEach((commandName) => {
     process.stdout.write(`\n ${commandName} -> ${commands[commandName].description}`)
   })
-
-  process.stdout.write('\n')
 }

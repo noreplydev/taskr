@@ -5,6 +5,7 @@ export const help = () => {
     create: '📦',
     check: '✅',
     uncheck: '❌',
+    delete: '🗑️ ',
     list: '🧾',
     help: '❓',
     clear: '🧹',

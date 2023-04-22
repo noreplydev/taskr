@@ -1,12 +1,12 @@
-import c from 'colors-cli'
 import { connect } from '../db/connection.js'
+import c from 'colors-cli'
 
-export const check = async (id) => {
+export const unCheck = async (id) => {
   const taskID = id.join('')
 
   const query = `
     UPDATE tasks 
-    SET done = true
+    SET done = false 
     WHERE id = '${taskID}'
     RETURNING task, id
   `
@@ -14,7 +14,7 @@ export const check = async (id) => {
   await PostgresInstance.query(query)
     .then(res => {
       const { task, id } = res.rows[0]
-      const status = c.x118('done')
+      const status = c.x160('not done')
       process.stdout.write(`\n Task marked as ${status}:`)
       process.stdout.write(`\n [${id.slice(0, 6)}...]: ${task}\n`)
     })

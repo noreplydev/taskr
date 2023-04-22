@@ -2,6 +2,7 @@ import { create } from './commands/create.js'
 import { List } from './commands/list.js'
 import { help } from './commands/help.js'
 import { check } from './commands/check.js'
+import { unCheck } from './commands/unCheck.js'
 console.log('Hello from commands.js')
 
 export const commands = {
@@ -12,6 +13,10 @@ export const commands = {
   check: {
     action: check,
     description: 'Mark a task as done using it´s id'
+  },
+  uncheck: {
+    action: unCheck,
+    description: 'Mark a task as undone using it´s id'
   },
   list: {
     action: List,

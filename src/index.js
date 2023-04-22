@@ -16,8 +16,8 @@ const prompt = readline.createInterface({
 })
 
 function run () {
-  const taskr = c.xb27('\n Taskr ')
-  prompt.question(taskr + ' ', async (input) => {
+  const taskr = c.xb27(' Taskr ')
+  prompt.question('\n' + taskr + ' ', async (input) => {
     const [commandAttemp, ...args] = input.split(' ')
 
     if (commands[commandAttemp]) {

@@ -1,9 +1,18 @@
 import { commands } from '../commands.js'
 
 export const help = () => {
+  const commandsEmojis = {
+    create: '📦',
+    check: '✅',
+    uncheck: '❌',
+    list: '🧾',
+    help: '❓',
+    clear: '🧹',
+    exit: '🚪'
+  }
   const commandNames = Object.keys(commands)
 
   commandNames.forEach((commandName) => {
-    process.stdout.write(`\n ${commandName} -> ${commands[commandName].description}`)
+    process.stdout.write(`\n ${commandsEmojis[commandName]} ${commandName} -> ${commands[commandName].description}`)
   })
 }

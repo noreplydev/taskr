@@ -3,6 +3,7 @@ import { List } from './commands/list.js'
 import { help } from './commands/help.js'
 import { check } from './commands/check.js'
 import { unCheck } from './commands/unCheck.js'
+import { deleteTask } from './commands/delete.js'
 console.log('Hello from commands.js')
 
 export const commands = {
@@ -17,6 +18,10 @@ export const commands = {
   uncheck: {
     action: unCheck,
     description: 'Mark a task as undone using it´s id'
+  },
+  delete: {
+    action: deleteTask,
+    description: 'Delete a task using it´s id'
   },
   list: {
     action: List,
